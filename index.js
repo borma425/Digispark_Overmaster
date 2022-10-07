@@ -3,8 +3,15 @@
 
 Witten by Borma
 
-It took [] 70 hours = 10 hours per day at week ] to fully program the tool
+It took [ 70 hours = 10 hours per day at week ] to fully program the tool
 
+My Facebook :
+
+https://www.facebook.com/borma425/
+
+Twitter :
+
+https://twitter.com/borma425
 
 */
 
@@ -314,6 +321,11 @@ var data = `
         "title": "Close Cmd.exe",
         "description": "Close The CMD"
         },
+        "Enter": {
+         "svg": " xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M10 8h4V6.5a3.5 3.5 0 1 1 3.5 3.5H16v4h1.5a3.5 3.5 0 1 1-3.5 3.5V16h-4v1.5A3.5 3.5 0 1 1 6.5 14H8v-4H6.5A3.5 3.5 0 1 1 10 6.5V8zM8 8V6.5A1.5 1.5 0 1 0 6.5 8H8zm0 8H6.5A1.5 1.5 0 1 0 8 17.5V16zm8-8h1.5A1.5 1.5 0 1 0 16 6.5V8zm0 8v1.5a1.5 1.5 0 1 0 1.5-1.5H16zm-6-6v4h4v-4h-4z' fill='rgba(47,204,113,1)'/>",
+         "title": "Enter Key",
+         "description": "Enter Key"
+         },
        "Wallpaper_Changer": {
         "svg": " xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M20 5H4v14l9.292-9.294a1 1 0 0 1 1.414 0L20 15.01V5zM2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z' fill='rgba(230,126,34,1)'/>",
         "title": "Wallpaper Changer ",
@@ -387,9 +399,10 @@ function Builder_pattern(command,input){
 const sendKeyStroke = (n1) =>{ return `\nDigiKeyboard.sendKeyStroke(${n1});\n`; }
 const delay         = (n1) =>{ return `\nDigiKeyboard.delay(${n1});\n`;
 }
-const print         = (n1) =>{ return `\nDigiKeyboard.print("${n1}");\n`;
+const print         = (n1) =>{ return `DigiKeyboard.print("${n1}");\n`;
 }
-
+const Enter         = (n1) =>{ return `${sendKeyStroke("KEY_ENTER")}`;
+}
 
 const cmd           = (n1="dir") =>{return `${
     sendKeyStroke(0)+
@@ -398,7 +411,7 @@ const cmd           = (n1="dir") =>{return `${
     sendKeyStroke("KEY_R, MOD_GUI_LEFT")+
     delay(500)+
     print(n1)+
-    sendKeyStroke("KEY_ENTER")+
+    Enter()+
     delay(500)
 
     }`;
@@ -415,11 +428,11 @@ const cmdAsAdmin           = (n1="dir") =>{return `${
     sendKeyStroke("0")+
     sendKeyStroke("KEY_ARROW_LEFT")+
     delay(500)+
-    sendKeyStroke("KEY_ENTER")+
+    Enter()+
 
     delay(500)+
     print(n1)+
-    sendKeyStroke("KEY_ENTER")+
+    Enter()+
     delay(500)
 
     }`;
@@ -429,7 +442,7 @@ const cmdAsAdmin           = (n1="dir") =>{return `${
 const closeCmd           = (n1) =>{return `${
  delay(500) +
  print("exit") +
- sendKeyStroke("KEY_ENTER")
+ Enter()
 }`;
 
 }
@@ -445,7 +458,7 @@ const Shutdown           = (n1) =>{return `${
     sendKeyStroke("0")+
     sendKeyStroke("KEY_ARROW_LEFT")+
     delay(500)+
-    sendKeyStroke("KEY_ENTER")
+    Enter()
    }`;
 }
 
@@ -455,7 +468,7 @@ const Restart           = (n1) =>{return `${
     sendKeyStroke("0")+
     sendKeyStroke("KEY_ARROW_LEFT")+
     delay(500)+
-    sendKeyStroke("KEY_ENTER")
+    Enter()
    }`;
 
 }
@@ -464,14 +477,14 @@ const Restart           = (n1) =>{return `${
 const Wallpaper_Changer           = (n1) =>{return
 cmd()+
 print(`$client.DownloadFile(\"${n1}\" , \"doge.jpg\")`)+
-sendKeyStroke("KEY_ENTER")+
+Enter()+
 delay(500)+
 print(`reg add \"HKCU\\Control Panel\\Desktop\" /v WallPaper /d \"%USERPROFILE%\\doge.jpg\" /f`)+
 delay(500)+
-sendKeyStroke("KEY_ENTER")+
+Enter()+
 delay(500)+
 print(`RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters ,1 ,True`)+
-sendKeyStroke("KEY_ENTER")+
+Enter()+
 delay(500)+
 closeCmd();
 
