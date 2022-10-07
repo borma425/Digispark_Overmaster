@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digispark Overmaster</title>
+    <meta property="og:title" content="Digispark Overmaster free IDE TOOL " />
+    <meta property="og:description" content="Digispark Overmaster free IDE TOOL allows to create and edit Digispark Scripts by the drag and drop technique,with cool GUI and easy to use it" />
+    <meta property="og:image" content="./dist/favicons/logo.png" />
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="./dist/style.css" rel="stylesheet">
+    <link rel="manifest" href="./dist/favicons/site.webmanifest" crossorigin="use-credentials">
+    <link rel="icon" href="./dist/favicons/favicon.ico" type="image/png">
+
+	<script src="https://codemirror.net/5/lib/codemirror.js"></script>
+
+	<script src="https://codemirror.net/5/mode/python/python.js"></script>
+
+</head>
+<body class="overflow-hidden ">
+
+<p class="block  lg:hidden">Work On PC Only</p>
+
+<div class="bg-behind-pattern min-h-screen w-full absolute hidden lg:block">
+
+
+
+<div class="mx-5 bg-gray-600 rounded-br-lg  h-auto my-6 relative px-1.5 py-3">
+<section class=" flex   h-10  w-auto mx-4 relative">
+
+
+<button onclick="window.location.reload()" class="h-8  bg-transparent  text-gray-300 font-semibold  py-0.5 px-4 border-2 border-gray-500 rounded mx-0.5">
+    Reload Page
+
+</button>
+
+
+
+
+<a  class="h-8  bg-transparent  text-gray-300 font-semibold  py-0.5 px-4 border-2 border-gray-500 rounded mx-0.5">
+    Star On Github
+
+</a>
+
+
+
+
+
+<a target="_blank" href="https://www.buymeacoffee.com/xborma" class="h-8  bg-transparent  text-gray-200 font-semibold  py-0.5 px-4 border-2 border-gray-500 rounded mx-0.5">
+    Buy  a coffee
+
+</a>
+
+
+<a target="_blank" href="https://www.paypal.com/paypalme/xborma" class="h-8  bg-transparent  text-gray-200 font-semibold  py-0.5 px-4 border-2 border-gray-500 rounded mx-0.5">
+    Support Me
+
+</a>
+
+
+
+<span class="h-8  bg-transparent  text-gray-300 font-semibold  py-0.5 px-4 border-2 border-gray-500 rounded mx-0.5">
+ Version : 1.0.0
+</span>
+
+
+<div class="absolute right-0 mx-4 mt-1 flex  text-gray-400 ">
+
+<span  class="text-violet-200">Digispark </span> &#xA0;	 <span  class="text-red-600"> Overmaster </span>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 23a7.5 7.5 0 0 1-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 5-2.47.27.773.5 1.604.5 2.47A7.5 7.5 0 0 1 12 23z" fill="rgba(230,126,34,1)"/></svg>
+
+</div>
+
+</section>
+
+<span class="text-white mx-3 ">Code IDE</span>
+
+<section class=" w-auto h-[44vh] mx-2 relative  ">
+
+
+<div class="flex">
+
+
+ <div class="border-2 	outline-0 flex	 border-gray-500 w-3/5 bg-gray-700 h-52	mt-2 mx-2" >
+
+
+
+<textarea id="overmaster"></textarea>
+
+
+
+
+
+ </div>
+
+<div class="border-2 h-60  border-gray-500 w-2/5 bg-gray-700 relative bottom-4">
+
+
+
+<div class=" h-full w-full  relative " id="mainContainer">
+
+
+<div class="minibar h-full hidden" id="Scripts" >
+
+
+<ol class="relative border-l ml-4 border-gray-200">
+
+
+        
+
+
+
+
+
+
+        </ol>
+        
+
+
+
+
+
+    </div>
+
+
+    <div class="minibar h-full hidden mt-2 px-2" >
+
+<p> <span class="text-yellow-500">MOD_CONTROL_LEFT</span>              <span class="text-green-500 ml-6" >Left Ctrl key</span>  </p>
+<p><span class="text-yellow-500">MOD_SHIFT_LEFT</span>                 <span class="text-green-500 ml-6" >Left Shift key</span></p>
+<p><span class="text-yellow-500">MOD_ALT_LEFT</span>                   <span class="text-green-500 ml-6" >Left Alt key</span></p>
+<p><span class="text-yellow-500">MOD_GUI_LEFT</span>                   <span class="text-green-500 ml-6" >Left Windows key</span></p>
+<p><span class="text-yellow-500">MOD_CONTROL_RIGHT</span>              <span class="text-green-500 ml-6" >Right Ctrl key</span></p>
+<p><span class="text-yellow-500">MOD_SHIFT_RIGHT</span>                <span class="text-green-500 ml-6" >Right Shift key</span></p>
+<p><span class="text-yellow-500">MOD_ALT_RIGHT</span>                  <span class="text-green-500 ml-6" >Right Alt key</span></p>
+<p><span class="text-yellow-500">MOD_GUI_RIGHT</span>                  <span class="text-green-500 ml-6" >Right Windows key</span></p>
+
+    </div>
+
+
+    <div class="minibar h-full block" id="Controller">
+
+    </div>
+
+
+
+    
+
+</div>
+
+        <div id="mainContainerButtons" class="flex items-center absolute top-60 right-3.5 bg-transparent">
+
+            <button  class="h-8  bg-transparent  text-gray-300 font-semibold flex  py-0.5 px-2 border-2 border-gray-500 rounded mx-0.5">
+                scripts 
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M4.873 3h14.254a1 1 0 0 1 .809.412l3.823 5.256a.5.5 0 0 1-.037.633L12.367 21.602a.5.5 0 0 1-.734 0L.278 9.302a.5.5 0 0 1-.037-.634l3.823-5.256A1 1 0 0 1 4.873 3z" fill="rgba(205,23,23,1)"/></svg>
+            </button>
+ 
+            <button  class="h-8  bg-transparent  text-gray-300 font-semibold flex  py-0.5 px-2 border-2 border-gray-500 rounded mx-0.5">
+                Kstroke
+                <svg class="ml-2"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.671-9.696c-.04.85.037 1.697.118 2.544.005.06.027.074.08.08.406.054.813.102 1.222.127.964.061 1.928.139 2.896.085.55-.03 1.1-.048 1.648-.095.78-.068 1.56-.155 2.33-.312.958-.194 1.907-.425 2.8-.845.406-.19.79-.415 1.114-.736.238-.235.408-.507.41-.86a8.92 8.92 0 0 0-.045-.94 9.022 9.022 0 0 0-.481-2.18c-.584-1.618-1.51-2.989-2.826-4.07a8.87 8.87 0 0 0-3.851-1.863c-.5-.105-1.006-.144-1.514-.18-.573-.041-1.064.12-1.488.514-.495.457-.837 1.024-1.122 1.633-.667 1.427-.973 2.954-1.166 4.508a15.215 15.215 0 0 0-.125 2.59zm3.57-5.03c.959.03 1.77.324 2.494.856a4.326 4.326 0 0 1 1.714 2.612c.068.304.097.612.103.922.005.209-.11.362-.262.49-.307.258-.67.401-1.05.508-.74.207-1.496.326-2.265.366-.5.026-1 .035-1.5.01-.192-.01-.385-.024-.577-.032-.06-.002-.08-.02-.084-.081-.023-.434-.057-.868-.05-1.302.016-1.026.094-2.045.397-3.034.1-.329.223-.65.42-.936.173-.25.378-.437.66-.38z" fill="rgba(42,142,34,1)"/></svg>         
+            
+            </button>
+             
+            <button class="h-8  bg-transparent  text-gray-300 font-semibold flex  py-0.5 px-2 border-2 border-gray-500 rounded mx-0.5">
+                Controller  
+                <svg  class="ml-2"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12zm-1 2H7v16h10V4zm-2 11v2h-2v-2h2zm-4 0v2H9v-2h2zm2-9v2h2v2h-2.001L13 12h-2l-.001-2H9V8h2V6h2z" fill="rgba(235,196,35,1)"/></svg>
+              </button>       
+        
+        </div>
+        
+
+
+    </div>
+
+</div>
+
+
+
+<div class="flex items-center absolute  left-14 top-56">
+
+    <button onclick="ducky_To_digi_Convert()" class="h-8  bg-transparent  text-gray-300 font-semibold  py-0.5 px-4 border-2 border-gray-500 rounded mx-0.5">
+        Duckyscript to Digispark
+    
+    </button>
+    <button onclick="ResetTextarea()" class="h-8  bg-transparent  text-gray-300 font-semibold  py-0.5 px-4 border-2 border-gray-500 rounded mx-0.5">
+     Reset Script
+    </button>
+    <button onclick="copy()" class="h-8  bg-transparent  text-gray-300 font-semibold  py-0.5 px-4 border-2 border-gray-500 rounded mx-0.5">
+       Copy Output
+    
+    </button>
+            
+
+</div>
+
+
+</section>
+
+
+<section class="bg-transparent w-auto h-[36vh] mx-2 relative  bottom-3">
+
+    <p class="text-gray-300  mx-4">Logs File</p>
+
+    <div class="flex relative ">
+
+<div id="logsFile" class="border-2 border-gray-500 w-full bg-gray-700 h-52 minibar	mt-2 mx-2 flex flex-col px-2 py-1 space-y-2">
+
+
+
+
+
+</div>
+
+
+<div class="border-2 border-gray-500 w-2/5 bg-gray-700 h-52	mt-2 mx-2 h-auto  minibar">
+
+
+
+<!-- start buttons -->
+<div id="widgets" class="flex flex-col space-y-3 mt-2 text-sm  items-center">
+
+</div>
+
+<!-- end buttons -->
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+</div>
+
+
+</div>
+
+
+
+<script src="./index.js"></script>
+<script src="./ducky2digi.js"></script>
+
+</body>
+</html>
