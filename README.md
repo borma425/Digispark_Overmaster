@@ -26,3 +26,8 @@ Digispark Overmaster : free IDE TOOL allows to create and edit Digispark Scripts
 
 
 [![IMAGE ALT TEXT HERE](https://user-images.githubusercontent.com/42983220/194581309-db5b0db8-58c3-4dcd-bf90-42b3cbddd26c.png)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+
+
+### This tool is designed to help developers and penetration testers only with good use.
+### We are not responsible for your wrong or harmful use, you are solely responsible for yourself.
