@@ -1,4 +1,3 @@
-
 #include <DigiMouse.h>
 
 void setup() {
@@ -7,19 +6,15 @@ void setup() {
 
 void loop() {
   DigiMouse.moveY(1); 
-  DigiMouse.delay(50);
-  DigiMouse.moveY(-1); 
-  DigiMouse.delay(50);
-  DigiMouse.moveY(1); 
-  DigiMouse.delay(100);
+  DigiMouse.delay(500);
   DigiMouse.moveY(-1); 
   DigiMouse.delay(500);
-  DigiMouse.moveY(1); 
-  DigiMouse.delay(50);
-  DigiMouse.moveY(-1); 
-  DigiMouse.delay(50);
-  DigiMouse.moveY(1); 
-  DigiMouse.delay(100);
+  DigiMouse.moveX(-100); 
+  DigiMouse.delay(500);
   DigiMouse.moveY(-1); 
   DigiMouse.delay(500);
+  DigiMouse.moveX(-1000); 
+  DigiMouse.delay(500);
+  DigiMouse.moveY(-900);   
+  
 }
