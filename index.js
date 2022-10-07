@@ -399,7 +399,7 @@ function Builder_pattern(command,input){
 const sendKeyStroke = (n1) =>{ return `\nDigiKeyboard.sendKeyStroke(${n1});\n`; }
 const delay         = (n1) =>{ return `\nDigiKeyboard.delay(${n1});\n`;
 }
-const print         = (n1) =>{ return `DigiKeyboard.print("${n1}");\n`;
+const print         = (n1) =>{ return `DigiKeyboard.println("${n1}");\n`;
 }
 const Enter         = (n1) =>{ return `${sendKeyStroke("KEY_ENTER")}`;
 }
