@@ -536,9 +536,6 @@ var HexKey =  Keyboard_values.match(regex)[0]  || null;
 HexKey = HexKey.match(new RegExp(patternHex,"g"))[0];
 outputKeys.push(HexKey);
 
-alert(Keyboard_values);
-
-
 
 }
 
