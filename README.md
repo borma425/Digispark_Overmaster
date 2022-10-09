@@ -25,7 +25,7 @@ Digispark Overmaster : free IDE TOOL allows to create and edit Digispark Scripts
 ## the tutorial Video
 
 
-[![IMAGE ALT TEXT HERE](https://user-images.githubusercontent.com/42983220/194581309-db5b0db8-58c3-4dcd-bf90-42b3cbddd26c.png)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](https://user-images.githubusercontent.com/42983220/194581309-db5b0db8-58c3-4dcd-bf90-42b3cbddd26c.png)](https://youtu.be/eomXjemqujY)
 
 
 
