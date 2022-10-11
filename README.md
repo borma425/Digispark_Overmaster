@@ -31,3 +31,12 @@ Digispark Overmaster : free IDE TOOL allows to create and edit Digispark Scripts
 
 ### This tool is designed to help developers and penetration testers only with good use.
 ### We are not responsible for your wrong or harmful use, you are solely responsible for yourself.
+
+
+
+## Useful links
+- https://github.com/Naheel-Azawy/ducky2digi
+- https://github.com/CedArctic/DigiSpark-Scripts
+- https://github.com/MTK911/Attiny85
+
+
