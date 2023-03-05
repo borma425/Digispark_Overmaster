@@ -4,7 +4,6 @@ Digispark Overmaster : free IDE TOOL allows to create and edit Digispark Scripts
 ![ScreenShot](./dist/favicons/logo.png)
 
 
-
 # [Try the tool online!](https://borma425.github.io/Digispark_Overmaster/)
 
 ![image](https://user-images.githubusercontent.com/42983220/194574453-4120afdd-a7ed-49e2-a5a2-9097394c5d9e.png)
